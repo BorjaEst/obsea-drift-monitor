@@ -1,0 +1,37 @@
+{
+    "title": "obsea-drift-monitor",
+    "summary": "Drift detector and monitor for obsea data adquisition.",
+    "description": [
+        "obsea-drift-monitor is an application using the DEEPaaS API.\n",
+        "Drift detector and monitor for obsea data adquisition."
+    ],
+    "keywords": [
+        "docker",
+        "api-v2"
+    ],
+    "license": "MIT",
+    "date_creation": "2024-12-13",
+    "sources": {
+        "dockerfile_repo": "https://github.com/ai4os-hub/obsea-drift-monitor",
+        "docker_registry_repo": "ai4oshub/obsea-drift-monitor",
+        "code": "https://github.com/ai4os-hub/obsea-drift-monitor",
+        "ai4_template": "ai4-template-adv/2.1.0"
+    },
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.services.ai4os.eu/buildStatus/icon?job=AI4OS-hub/obsea-drift-monitor/main",
+        "build_status_url": "https://jenkins.services.ai4os.eu/job/AI4OS-hub/job/obsea-drift-monitor/job/main/"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-marathon-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
